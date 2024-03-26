@@ -22,7 +22,7 @@ def censor_text():
     custom_swears = load_custom_swears_from_json(json_file)
     profanity.add_censor_words(custom_swears)
     text = request.form['text']
-    censored_text = profanity.censor(text)
+    censored_text = profanity.censor(text, "@")
     return censored_text
 
 if __name__ == '__main__':
